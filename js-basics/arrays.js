@@ -22,4 +22,22 @@ val1.push({
 // val1 = [1,2,3]
 
 //working with spread and rest operators
+// here, works as rest operator
+const fun2 = (...args) => {
+    console.log(args)
+}
 
+
+fun2('aatir', 'nadim', 12, {name:'aatir', age : 123})
+
+
+const val3 = val2.slice() //0 passed as the start default value
+const val4 = [val3] //nested operator
+const val5 = [...val3]
+console.log(val3)
+console.log(val4)
+console.log(val5)
+
+
+const val6 = {...val5} //this works fine as well
+console.log(val6)
