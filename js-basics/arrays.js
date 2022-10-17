@@ -41,3 +41,20 @@ console.log(val5)
 
 const val6 = {...val5} //this works fine as well
 console.log(val6)
+
+
+const fun3 = ({age, name, killshots}) => {
+    name = 'nadim'
+    //this is a local variable which has the value linked to the key with the same identifier in the passed object, the value in the original value is not changed
+    // value of the variable passed, good for accessing the object
+    console.log(name, age,killshots)
+}   
+const fun4 = obj => {
+    // reference to the object is passed, good for manipulating the object
+    obj.name = 'nadim'
+}
+const obj = {name : 'aatir', age :3}
+fun3(obj)
+console.log(obj)
+fun4(obj)
+console.log(obj)
