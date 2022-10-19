@@ -1,1 +1,3 @@
 file handling enabled with node
+
+note : node only uses one thread in the entire process
