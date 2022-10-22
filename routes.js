@@ -1,7 +1,7 @@
-const http = require('http')
 const fs = require('fs');
+// const { builtinModules } = require('module');
 
-const server = http.createServer((req, res) => {
+const requestHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
     if(url === '/' || url === '/home') {
@@ -22,26 +22,36 @@ const server = http.createServer((req, res) => {
         req.on('data', (chunk) => {
             chunkArr.push(chunk);
             console.log(chunk)
+            
         }) //registering an event listener
         // console.log(chunkArr);
+        // in order to ensure the below function gets executed, return this code, like --> 
+        // return req.on('end', () => {})
         req.on('end', () => {
+            
+            // return res.end();
+            // event listener executed after the preceeding stuff gets executed
             const streamBuffer = Buffer.concat(chunkArr);
             streamStr = streamBuffer.toString();
             console.log(streamStr);    
             // fs.writeFileSync('./message.txt', 'temp file')
-            fs.writeFileSync('./message.txt', streamStr);
-            // event listener executed after the preceeding stuff gets executed
+            fs.writeFile('./message.txt', streamStr, (err) => {
+                // res.statusCode = 302;
+                // res.setHeader('Location','/home');
+
+            });
         })
         //req events do not get executed the same as the main body
         //req events ge executed after we send the response to the client
         res.statusCode = 302;
         res.setHeader('Location', '/home')
-
+        console.log('temptemptemp')
+        // res.setHeader('Location', '/test');
         // console.log({streamStr}); 
         // console.log(typeof streamStr);
         
         return res.end();
     }
-});
+}
 
-server.listen(3400)
+module.exports = requestHandler;
