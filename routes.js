@@ -52,6 +52,13 @@ const requestHandler = (req, res) => {
         
         return res.end();
     }
+    else if (url === '/aatir') {
+        res.write("<html><head><title>Aatir Page</title></head><body>this is the page for aatir's aubergine</body></html>")
+        return res.end();
+
+    }
+    res.write('<html><head><title>404 page</title></head><body>this is the 404 page</body></html>')
+    res.end();
 }
 
 module.exports = requestHandler;

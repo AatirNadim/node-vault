@@ -1,0 +1,24 @@
+{
+  "name": "node-vault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "geton": "node app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AatirNadim/node-vault.git"
+  },
+  "author": "Aatir Nadim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AatirNadim/node-vault/issues"
+  },
+  "homepage": "https://github.com/AatirNadim/node-vault#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
