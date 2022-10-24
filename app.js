@@ -19,11 +19,14 @@ app.use('/add-product', (req, res, next) => {
     res.send('<h1>this is the add-product page</h1><form action = "/product" method = "POST"><input type = "text" name = "aatir"><button type = "submit">click me</button></form>')
     // res.send('')
 })
-app.use('/product', (req,res, next) => {
+app.post('/product', (req,res, next) => {
     console.log('--------' , req.body, '------------') //undefined without the body parser
     // res.send('this is the products page');
     //using the parser we get js object, with the key as the name attribute in the input tag
     res.redirect('/');
+})
+app.get('/product', (req, res, next) => {
+    res.send('<h1>this is the product page</h1>');
 })
 app.use('/add-product', (req, res, next)=> {
     res.send('<h1>here is another page for the add-product util</h1>')
