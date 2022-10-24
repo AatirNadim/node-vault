@@ -6,5 +6,5 @@ const routes = require('./routes')
 // createServer(routes.func)
 
 const server = http.createServer(routes);
-
-server.listen(3400)
+// console.log(process.env.NODE_ENV);
+server.listen(3500)
