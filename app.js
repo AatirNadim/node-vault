@@ -14,10 +14,14 @@ const app = express()
 app.use(bodyParser.urlencoded({extended : false}));
 //parse bodies sent through the mail
 
-app.use(adminRoutes);
-app.use(userRoutes);
+app.use('/admin',adminRoutes);
+app.use('/user', userRoutes);
+//this is for handling undefined path
+app.use('/', (req, res, next) => {
+    res.send('<h1>in the homepage</h1>')
+})
 app.use((req, res) => {
-    res.send('<h1>this is the 404 page</h1>')
+    res.status(404).send('<h1>this is the 404 page</h1>')
 })
 
 // const server = http.createServer(appfunc);
