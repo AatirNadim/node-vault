@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0px;
+}
+.index__header {
+    margin: 0px;
+    margin-top: 4px;
+    padding: 0px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+.header__nav {
+    background-color: green;
+    margin: 4px;
+    padding: 3px;
+}
