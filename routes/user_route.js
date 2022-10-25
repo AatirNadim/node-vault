@@ -1,5 +1,7 @@
 const express = require('express')
 
+const rootdir = require('../utils/rootpath')
+
 const router = express.Router();
 
 
@@ -8,6 +10,7 @@ const router = express.Router();
 
 
 router.get('/product', (req, res, next) => {
+    console.log(rootdir)
     res.send('<h1>this is the product page</h1>');
 })
 router.get('/', (req, res, next) => {
