@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 page</title>
+    <title>Products Page</title>
     <style>
         body {
             padding: 0;
@@ -23,8 +23,8 @@
         }
         .header__nav {
             height: 100%;
-            width: 100%;
             display: flex;
+            width: 100%;
             align-items: center;
         }
         .nav__ul {
@@ -45,7 +45,7 @@
             font-size: 110%;
             color: brown;
         }
-        .nav__li a:hover, .nav__li a:active, .nav__li a .active {
+        .nav__li a:hover, .nav li a:active, .nav li a.active {
             color: rgb(101, 53, 9)
         }
     </style>
@@ -54,16 +54,13 @@
     <header class="index__header">
         <nav class="header__nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href = "/">Home</a></li>
-                <li class="nav__li"><a class = "active" href = "/admin/add-product">Add a product</a></li>
+                <li class="nav__li"><a href="/">Home</a></li>
+                <li class="nav__li"><a href = "/admin/add-product">Add a product</a></li>
             </ul>
         </nav>
     </header>
-    <main><p>this is the 404 page</p>
-        </main>
+    <main>
+        <p>this is the products page</p>
+    </main>
 </body>
 </html>
-
-
-
-
