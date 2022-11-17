@@ -4,28 +4,15 @@ const rootdir = require('../utils/rootpath')
 const path = require('path');
 const router = express.Router();
 
+const adminData = require('./admin_route');
 
 
 
-
-
-router.get('/product', (req, res, next) => {
-    console.log('---------', rootdir)
-    // 
-    res.sendFile(path.join(rootdir, 'views', 'products.html'))
-    // res.send('<h1>this is the user product page</h1>')
-})
 router.get('/', (req, res, next) => {
-    console.log('in the middleware');
-    next();
+    console.log(adminData.products)
+    // the data persists relative to the server itself, so it will be visible to other users sending requests to this server, which is why, we do not implement this
+    res.send('<h1>in the shop landing page</h1>')
 })
-//even if i give the path, it is still logging the other middleware blocks, why??
-router.get('/', (req, res) => {
-    console.log('in the next middleware')
-    res.send("<h1>this is a header</h1>")
-    // console.log('============test=====================')
-})
-
 
 
 module.exports = router;

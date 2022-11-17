@@ -1,6 +1,3 @@
-*{
-    /* box-sizing: border-box; */
-}
 body {
     padding: 0;
     margin: 0;
@@ -8,12 +5,12 @@ body {
 }
 main {
     padding: 1rem;
-    /* background-color: yellowgreen; */
+    background-color: rgb(218, 232, 189);;
 }
 .index__header {
     width: 100%;
     height: 3.5rem;
-    background-color: rgb(224, 197, 47);
+    background-color: rgb(11, 109, 80);
     /* padding: 0 1.5rem; */
 }
 .header__nav {
@@ -36,12 +33,13 @@ main {
 }
 .nav__li a {
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 530;
     font-size: 110%;
-    color: brown;
+    color: white;
 }
 .nav__li a:hover, .nav__li a:active, .nav__li a .active {
-    color: rgb(101, 53, 9)
+    transition: 400ms color ease-out;
+    color: rgb(210, 237, 55);
 }
 
 main .product__form {
